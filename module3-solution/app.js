@@ -4,7 +4,7 @@
     angular.module('NarrowItDownApp', [])
         .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuItemsService', MenuItemsService)
-        .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com")
+        .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com")
         .directive('foundItems', FoundItems)
 
     NarrowItDownController.inject = [MenuItemsService]
