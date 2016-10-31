@@ -1,0 +1,20 @@
+<div class="loader"></div>
+
+<div class="row" ng-if="foundItemsController.itemsLoaded()">
+	<div class="col-xs-12">	
+		<h3>{{ foundItemsController.list.length }} menu items found.</h3>
+	</div>
+</div>
+    
+<div class="row" ng-repeat="item in foundItemsController.list">
+	<div class="col-xs-3">{{ item.name }}</div>
+	<div class="col-xs-1">{{ item.short_name }}</div>
+	<div class="col-xs-6">{{ item.description }}</div>
+    <div class="col-xs-2"><button ng-click="foundItemsController.onRemove({index: $index})">Don't want this one!</button></div>
+</div>
+
+<div class="row" ng-if="foundItemsController.showEmptyMessage()">
+	<div class="col-xs-12">	
+		<h3>Nothing found.</h3>
+	</div>
+</div>
