@@ -18,3 +18,7 @@
 .ui-view-placeholder {
     margin-top: 60px;
 }
+
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }

@@ -22,7 +22,8 @@ function UserInfoController(UserInfoService, MenuService) {
 	  	MenuService.getMenuItem($ctrl.favoriteDishShortName).then(
   			function (data) {
   				console.log('UserInfoController register item found', data);
-  				$ctrl.userInfo=data;
+  				$ctrl.userInfo.favoriteDish=data;
+  				$ctrl.userInfo.favoriteDishShortName=data.short_name;
   				UserInfoService.setUserInfo($ctrl.userInfo);
 				$ctrl.favoriteDishError=null;
 				$ctrl.registerSuccess='Your information has been saved.';

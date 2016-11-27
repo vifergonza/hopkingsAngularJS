@@ -15,6 +15,7 @@ function UserInfoService() {
   }
 
   service.setUserInfo = function (data) {
+    console.log('UserInfoService.setUserInfo', data);
     service.userInfo = data;
   }
 
