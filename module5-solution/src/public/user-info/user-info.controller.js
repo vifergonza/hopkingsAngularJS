@@ -18,8 +18,8 @@ function UserInfoController(UserInfoService, MenuService) {
   }
 
   $ctrl.register = function () {
-  	if ($ctrl.favoriteDishShortName!=null) {
-	  	MenuService.getMenuItem($ctrl.favoriteDishShortName).then(
+  	if ($ctrl.userInfo.favoriteDishShortName!==null) {
+	  	MenuService.getMenuItem($ctrl.userInfo.favoriteDishShortName).then(
   			function (data) {
   				console.log('UserInfoController register item found', data);
   				$ctrl.userInfo.favoriteDish=data;
